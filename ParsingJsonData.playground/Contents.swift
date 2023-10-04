@@ -28,3 +28,5 @@ struct Recipe: Decodable {
 let recipesData = Data(recipesJSONString.utf8)
 let decoder = JSONDecoder()
 let recipes = try! decoder.decode([Recipe].self, from: recipesData)
+
+recipes.forEach{print("\($0.title) with a rating of \($0.rating)")}
