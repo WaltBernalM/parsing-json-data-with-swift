@@ -1,0 +1,29 @@
+import Foundation
+
+let recipesJSONString = """
+[
+    {
+        "title": "Apple pie",
+        "views": 3847,
+        "rating": 4.5
+    },
+    {
+        "title": "Boiled egg",
+        "views": 10584,
+        "rating": 4.9
+    },
+    {
+        "title": "Bacon roll",
+        "views": 5847,
+        "rating": 3.2
+    }
+]
+"""
+
+struct Recipe: Decodable {
+    let title: String
+    let views: Int
+    let rating: Double
+}
+
+let jsonString = Data(recipesJSONString.utf8)
