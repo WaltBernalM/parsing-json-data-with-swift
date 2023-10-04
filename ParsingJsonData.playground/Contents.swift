@@ -27,3 +27,4 @@ struct Recipe: Decodable {
 }
 let recipesData = Data(recipesJSONString.utf8)
 let decoder = JSONDecoder()
+let recipes = try! decoder.decode([Recipe].self, from: recipesData)
