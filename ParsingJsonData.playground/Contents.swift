@@ -25,5 +25,5 @@ struct Recipe: Decodable {
     let views: Int
     let rating: Double
 }
-
-let jsonString = Data(recipesJSONString.utf8)
+let recipesData = Data(recipesJSONString.utf8)
+let decoder = JSONDecoder()
